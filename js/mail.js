@@ -39,6 +39,7 @@ const show = {
 
 const fire = (event) => {
     const target = event.target;
+    if (target.classList.length !== 0 || target.tagName !== 'TD') return;
     show.miss(target);
     play.updateData = 'shot';
 
